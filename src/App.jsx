@@ -9,6 +9,10 @@ function App() {
       <Student></Student>
       <Developer></Developer>
       <NewDeveloper></NewDeveloper>
+
+      {/* Passing Props */}
+      <Device name="Laptop" price="55000"></Device>
+      <Device name="Mobile" price="17000"></Device>
     </>
   )
 };
@@ -29,6 +33,7 @@ function Person() {
   );
 };
 
+
 // Another component I created
 function Student() {
   const name = "Monir";
@@ -45,6 +50,7 @@ function Student() {
     </div>
   );
 };
+
 
 // Another component I created
 function Developer() {
@@ -83,4 +89,11 @@ function NewDeveloper() {
   );
 };
 
+
+// Another Component I created
+// General Rule: Accessing props without Destructuring
+function Device(props) {
+  // console.log(props);
+  return <h2>This Device: {props.name} and price: {props.price}</h2>
+}
 export default App;
